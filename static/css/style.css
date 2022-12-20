@@ -1,3 +1,117 @@
-body{
-    background-color: rgb(219, 211, 211);
-}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .cards {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 1.5%;
+    box-sizing: border-box;
+  }
+  
+  .card {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    background: #fefff9;
+    color: #363636;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0 0 8px 0;
+    border-radius: 4px;
+  }
+  @media (max-width: 700px) {
+    .card {
+      width: 100%;
+    }
+  }
+  @media (min-width: 700px) {
+    .card {
+      max-width: 320px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    .card:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+  @media (min-width: 980px) {
+    .card:nth-child(even) {
+      margin-right: 20px;
+    }
+    .card:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  .card span {
+    display: block;
+  }
+  .card .card-summary {
+    padding: 5% 5% 3% 5%;
+  }
+  .card .card-header {
+    position: relative;
+    height: 175px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    background-blend-mode: overlay;
+    border-radius: 4px 4px 0 0;
+  }
+  .card .card-header:hover, .card .card-header:focus {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .card .card-title {
+    background: rgba(157, 187, 63, 0.85);
+    padding: 3.5% 0 2.5% 0;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .card .card-title h3 {
+    font-size: 1.2em;
+    line-height: 1.2;
+    padding: 0 3.5%;
+    margin: 0;
+  }
+  .card .card-meta {
+    max-height: 0;
+    overflow: hidden;
+    color: #666;
+    font-size: .78em;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5%;
+    padding: 0 5%;
+    transition-property: max-height;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+  }
+  .card:hover, .card:focus {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  }
+  .card:hover .card-title, .card:focus .card-title {
+    background: rgba(157, 187, 63, 0.95);
+  }
+  .card:hover .card-meta, .card:focus .card-meta {
+    max-height: 1em;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+ .date{
+
+    color:black !important;
+    list-style-type: none !important;
+ }
